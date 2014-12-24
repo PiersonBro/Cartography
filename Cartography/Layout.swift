@@ -9,7 +9,7 @@
 import Foundation
 
 public func layout(view: View, block: LayoutProxy -> ()) {
-    let context = Context(removeExisting: false, performLayout: true)
+    let context = Context(performLayout: true)
 
     block(LayoutProxy(context, view))
 
@@ -17,7 +17,7 @@ public func layout(view: View, block: LayoutProxy -> ()) {
 }
 
 public func layout(v1: View, v2: View, block: (LayoutProxy, LayoutProxy) -> ()) {
-    let context = Context(removeExisting: false, performLayout: true)
+    let context = Context(performLayout: true)
 
     block(LayoutProxy(context, v1), LayoutProxy(context, v2))
 
@@ -25,7 +25,7 @@ public func layout(v1: View, v2: View, block: (LayoutProxy, LayoutProxy) -> ()) 
 }
 
 public func layout(v1: View, v2: View, v3: View, block: (LayoutProxy, LayoutProxy, LayoutProxy) -> ()) {
-    let context = Context(removeExisting: false, performLayout: true)
+    let context = Context(performLayout: true)
 
     block(LayoutProxy(context, v1), LayoutProxy(context, v2), LayoutProxy(context, v3))
 
@@ -33,71 +33,39 @@ public func layout(v1: View, v2: View, v3: View, block: (LayoutProxy, LayoutProx
 }
 
 public func layout(views: [View], block:([LayoutProxy]) -> ()) {
-    let context = Context(removeExisting: false, performLayout: true)
+    let context = Context(performLayout: true)
 
     block(views.map({ LayoutProxy(context, $0) }))
 
     context.installConstraints()
 }
 
-public func addConstraints(view: View, block: LayoutProxy -> ()) {
-    let context = Context(removeExisting: false, performLayout: true)
+public func constrain(view: View, block: LayoutProxy -> ()) {
+    let context = Context(performLayout: false)
 
     block(LayoutProxy(context, view))
 
     context.installConstraints()
 }
 
-public func addConstraints(v1: View, v2: View, block: (LayoutProxy, LayoutProxy) -> ()) {
-    let context = Context(removeExisting: false, performLayout: true)
+public func constrain(v1: View, v2: View, block: (LayoutProxy, LayoutProxy) -> ()) {
+    let context = Context(performLayout: false)
 
     block(LayoutProxy(context, v1), LayoutProxy(context, v2))
 
     context.installConstraints()
 }
 
-public func addConstraints(v1: View, v2: View, v3: View, block: (LayoutProxy, LayoutProxy, LayoutProxy) -> ()) {
-    let context = Context(removeExisting: false, performLayout: true)
+public func constrain(v1: View, v2: View, v3: View, block: (LayoutProxy, LayoutProxy, LayoutProxy) -> ()) {
+    let context = Context(performLayout: false)
 
     block(LayoutProxy(context, v1), LayoutProxy(context, v2), LayoutProxy(context, v3))
 
     context.installConstraints()
 }
 
-public func addConstraints(views: [View], block:([LayoutProxy]) -> ()) {
-    let context = Context(removeExisting: false, performLayout: true)
-
-    block(views.map({ LayoutProxy(context, $0) }))
-
-    context.installConstraints()
-}
-
-public func replaceConstraints(view: View, block: LayoutProxy -> ()) {
-    let context = Context(removeExisting: true, performLayout: true)
-
-    block(LayoutProxy(context, view))
-
-    context.installConstraints()
-}
-
-public func replaceConstraints(v1: View, v2: View, block: (LayoutProxy, LayoutProxy) -> ()) {
-    let context = Context(removeExisting: true, performLayout: true)
-
-    block(LayoutProxy(context, v1), LayoutProxy(context, v2))
-
-    context.installConstraints()
-}
-
-public func replaceConstraints(v1: View, v2: View, v3: View, block: (LayoutProxy, LayoutProxy, LayoutProxy) -> ()) {
-    let context = Context(removeExisting: true, performLayout: true)
-
-    block(LayoutProxy(context, v1), LayoutProxy(context, v2), LayoutProxy(context, v3))
-
-    context.installConstraints()
-}
-
-public func replaceConstraints(views: [View], block:([LayoutProxy]) -> ()) {
-    let context = Context(removeExisting: true, performLayout: true)
+public func constrain(views: [View], block:([LayoutProxy]) -> ()) {
+    let context = Context(performLayout: false)
 
     block(views.map({ LayoutProxy(context, $0) }))
 
