@@ -14,7 +14,7 @@ class ViewHierarchySpec: QuickSpec {
                     layout(viewA, viewB) { viewA, viewB in
                         viewA.width == viewB.width
                     }
-                }).to(raiseException())
+                }()).to(raiseException())
             }
 
             it("should consider a view its own closest common ancestor") {

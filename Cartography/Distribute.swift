@@ -48,7 +48,7 @@ public func distribute(by amount: CGFloat, horizontally first: LayoutProxy, rest
 ///
 /// - returns: An array of `NSLayoutConstraint` instances.
 ///
-public func distribute(by amount: CGFloat, leftToRight first: LayoutProxy, rest: LayoutProxy...) -> [NSLayoutConstraint] {
+public func distribute(by amount: CGFloat, leftToRight first: LayoutProxy, _ rest: LayoutProxy...) -> [NSLayoutConstraint] {
     return reduce(first, rest: rest) { $0.right == $1.left - amount  }
 }
 
@@ -62,6 +62,6 @@ public func distribute(by amount: CGFloat, leftToRight first: LayoutProxy, rest:
 ///
 /// - returns: An array of `NSLayoutConstraint` instances.
 ///
-public func distribute(by amount: CGFloat, vertically first: LayoutProxy, rest: LayoutProxy...) -> [NSLayoutConstraint] {
+public func distribute(by amount: CGFloat, vertically first: LayoutProxy, _ rest: LayoutProxy...) -> [NSLayoutConstraint] {
     return reduce(first, rest: rest) { $0.bottom == $1.top - amount }
 }

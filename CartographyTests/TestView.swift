@@ -25,11 +25,11 @@ class TestView: View {
 
 #if os(iOS)
     var car_constraints: [NSLayoutConstraint] {
-        return constraints as! [NSLayoutConstraint]
+        return constraints
     }
 #else
     var car_constraints: [NSLayoutConstraint] {
-        return constraints as! [NSLayoutConstraint]
+        return constraints
     }
 
     override var flipped: Bool {

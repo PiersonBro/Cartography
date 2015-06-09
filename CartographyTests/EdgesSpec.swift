@@ -55,7 +55,7 @@ class EdgesSpec: QuickSpec {
 
             it("should inset all edges individually") {
                 layout(view) { view in
-                    view.edges == inset(view.superview!.edges, 10, 20, 30, 40)
+                    view.edges == inset(view.superview!.edges, top: 10, leading: 20, bottom: 30, trailing: 40)
                 }
 
                 expect(view.frame).to(equal(CGRectMake(20, 10, 340, 360)))

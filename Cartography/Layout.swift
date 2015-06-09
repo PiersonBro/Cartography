@@ -33,7 +33,7 @@ public func layout(view: View, replace group: ConstraintGroup = ConstraintGroup(
 /// - parameter replace: The `ConstraintGroup` whose constraints should be replaced.
 /// - parameter block:   A block that declares the layout for the views.
 ///
-public func layout(view1: View, view2: View, replace group: ConstraintGroup = ConstraintGroup(), @noescape block: (LayoutProxy, LayoutProxy) -> ()) -> ConstraintGroup {
+public func layout(view1: View, _ view2: View, replace group: ConstraintGroup = ConstraintGroup(), @noescape block: (LayoutProxy, LayoutProxy) -> ()) -> ConstraintGroup {
     let context = Context()
     block(LayoutProxy(context, view1), LayoutProxy(context, view2))
     group.replaceConstraints(context.constraints, performLayout: true)
@@ -51,7 +51,7 @@ public func layout(view1: View, view2: View, replace group: ConstraintGroup = Co
 /// - parameter replace: The `ConstraintGroup` whose constraints should be replaced.
 /// - parameter block:   A block that declares the layout for the views.
 ///
-public func layout(view1: View, view2: View, view3: View, replace group: ConstraintGroup = ConstraintGroup(), @noescape block: (LayoutProxy, LayoutProxy, LayoutProxy) -> ()) -> ConstraintGroup {
+public func layout(view1: View, _ view2: View, _ view3: View, replace group: ConstraintGroup = ConstraintGroup(), @noescape block: (LayoutProxy, LayoutProxy, LayoutProxy) -> ()) -> ConstraintGroup {
     let context = Context()
     block(LayoutProxy(context, view1), LayoutProxy(context, view2), LayoutProxy(context, view3))
     group.replaceConstraints(context.constraints, performLayout: true)
@@ -123,7 +123,7 @@ public func constrain(view: View, replace group: ConstraintGroup = ConstraintGro
 /// - parameter replace: The `ConstraintGroup` whose constraints should be replaced.
 /// - parameter block:   A block that declares the layout for the views.
 ///
-public func constrain(v1: View, v2: View, replace group: ConstraintGroup = ConstraintGroup(), @noescape block: (LayoutProxy, LayoutProxy) -> ()) -> ConstraintGroup {
+public func constrain(v1: View, _ v2: View, replace group: ConstraintGroup = ConstraintGroup(), @noescape block: (LayoutProxy, LayoutProxy) -> ()) -> ConstraintGroup {
     let context = Context()
     block(LayoutProxy(context, v1), LayoutProxy(context, v2))
     group.replaceConstraints(context.constraints, performLayout: false)
@@ -139,7 +139,7 @@ public func constrain(v1: View, v2: View, replace group: ConstraintGroup = Const
 /// - parameter replace: The `ConstraintGroup` whose constraints should be replaced.
 /// - parameter block:   A block that declares the layout for the views.
 ///
-public func constrain(v1: View, v2: View, v3: View, replace group: ConstraintGroup = ConstraintGroup(), @noescape block: (LayoutProxy, LayoutProxy, LayoutProxy) -> ()) -> ConstraintGroup {
+public func constrain(v1: View, _ v2: View, _ v3: View, replace group: ConstraintGroup = ConstraintGroup(), @noescape block: (LayoutProxy, LayoutProxy, LayoutProxy) -> ()) -> ConstraintGroup {
     let context = Context()
     block(LayoutProxy(context, v1), LayoutProxy(context, v2), LayoutProxy(context, v3))
     group.replaceConstraints(context.constraints, performLayout: false)
