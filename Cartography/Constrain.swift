@@ -8,6 +8,7 @@
 
 import Foundation
 
+@discardableResult
 /// Updates the constraints of a single view.
 ///
 /// - parameter view:    The view to layout.
@@ -23,6 +24,7 @@ public func constrain(_ view: View, replace group: ConstraintGroup = ConstraintG
     return group
 }
 
+@discardableResult
 /// Updates the constraints of two views.
 ///
 /// - parameter view1:   A view to layout.
@@ -39,6 +41,7 @@ public func constrain(_ view1: View, _ view2: View, replace group: ConstraintGro
     return group
 }
 
+@discardableResult
 /// Updates the constraints of three views.
 ///
 /// - parameter view1:   A view to layout.
@@ -56,6 +59,7 @@ public func constrain(_ view1: View, _ view2: View, _ view3: View, replace group
     return group
 }
 
+@discardableResult
 /// Updates the constraints of four views.
 ///
 /// - parameter view1:   A view to layout.
@@ -74,6 +78,7 @@ public func constrain(_ view1: View, _ view2: View, _ view3: View, _ view4: View
     return group
 }
 
+@discardableResult
 /// Updates the constraints of five views.
 ///
 /// - parameter view1:   A view to layout.
@@ -93,6 +98,7 @@ public func constrain(_ view1: View, _ view2: View, _ view3: View, _ view4: View
     return group
 }
 
+@discardableResult
 /// Updates the constraints of an array of views.
 ///
 /// - parameter views:   The views to layout.
@@ -108,6 +114,7 @@ public func constrain(_ views: [View], replace group: ConstraintGroup = Constrai
     return group
 }
 
+@discardableResult
 /// Updates the constraints of a dictionary of views.
 ///
 /// - parameter views:   The views to layout.
@@ -130,6 +137,7 @@ public func constrain<T: Hashable>(_ views: [T: View], replace group: Constraint
     return group
 }
 
+@discardableResult
 /// Removes all constraints for a group.
 ///
 /// - parameter clear: The `ConstraintGroup` whose constraints should be removed.

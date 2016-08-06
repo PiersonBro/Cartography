@@ -21,6 +21,7 @@ public protocol Compound {
 /// with other compound properties of the same type.
 public protocol RelativeCompoundEquality : Compound { }
 
+@discardableResult
 /// Declares a property equal to a the result of an expression.
 ///
 /// - parameter lhs: The affected property. The associated view will have
@@ -33,6 +34,7 @@ public func == <P: RelativeCompoundEquality>(lhs: P, rhs: Expression<P>) -> [NSL
     return lhs.context.addConstraint(lhs, coefficients: rhs.coefficients, to: rhs.value)
 }
 
+@discardableResult
 /// Declares a property equal to another compound property.
 ///
 /// - parameter lhs: The affected property. The associated view will have
@@ -47,6 +49,7 @@ public func == <P: RelativeCompoundEquality>(lhs: P, rhs: P) -> [NSLayoutConstra
 /// operators with other compound properties of the same type.
 public protocol RelativeCompoundInequality : Compound { }
 
+@discardableResult
 /// Declares a property less than or equal to another compound property.
 ///
 /// - parameter lhs: The affected property. The associated view will have
@@ -59,6 +62,7 @@ public func <= <P: RelativeCompoundInequality>(lhs: P, rhs: P) -> [NSLayoutConst
     return lhs.context.addConstraint(lhs, to: rhs, relation: NSLayoutRelation.lessThanOrEqual)
 }
 
+@discardableResult
 /// Declares a property greater than or equal to another compound property.
 ///
 /// - parameter lhs: The affected property. The associated view will have
@@ -71,6 +75,7 @@ public func >= <P: RelativeCompoundInequality>(lhs: P, rhs: P) -> [NSLayoutConst
     return lhs.context.addConstraint(lhs, to: rhs, relation: NSLayoutRelation.greaterThanOrEqual)
 }
 
+@discardableResult
 /// Declares a property less than or equal to the result of an expression.
 ///
 /// - parameter lhs: The affected property. The associated view will have
@@ -83,6 +88,7 @@ public func <= <P: RelativeCompoundInequality>(lhs: P, rhs: Expression<P>) -> [N
     return lhs.context.addConstraint(lhs, coefficients: rhs.coefficients, to: rhs.value, relation: NSLayoutRelation.lessThanOrEqual)
 }
 
+@discardableResult
 /// Declares a property greater than or equal to the result of an expression.
 ///
 /// - parameter lhs: The affected property. The associated view will have

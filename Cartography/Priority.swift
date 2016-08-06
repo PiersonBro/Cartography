@@ -18,6 +18,7 @@ public typealias LayoutPriority = NSLayoutPriority
 
 infix operator  ~ { }
 
+@discardableResult
 /// Sets the priority for a constraint.
 ///
 /// - parameter lhs: The constraint to update.
@@ -31,6 +32,7 @@ public func ~ (lhs: NSLayoutConstraint, rhs: LayoutPriority) -> NSLayoutConstrai
     return lhs
 }
 
+@discardableResult
 /// Sets the priority for multiple constraints.
 ///
 /// - parameter lhs: An array of `NSLayoutConstraint` instances.
