@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "364D2E5F611143E7C4D0A99C691B1988FBD5381F",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "DD25B9E902E46CE83FDE35C1A3F2D1B9E6D1E355" : 9223372036854775807,
+    "364D2E5F611143E7C4D0A99C691B1988FBD5381F" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "2059860A-C7E2-483A-8A46-84F0B69FB953",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "DD25B9E902E46CE83FDE35C1A3F2D1B9E6D1E355" : "",
+    "364D2E5F611143E7C4D0A99C691B1988FBD5381F" : "Cartography\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Cartography",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Cartography.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/PiersonBro\/Cartography",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "364D2E5F611143E7C4D0A99C691B1988FBD5381F"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/PiersonBro\/Ready.Timer.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "DD25B9E902E46CE83FDE35C1A3F2D1B9E6D1E355"
+    }
+  ]
+}
